@@ -15,7 +15,7 @@ RUN cd /opt && \
     ZAP_DIR_NAME=$(ls -1 ./temp) && \
     mv ./temp/${ZAP_DIR_NAME} ZAP && \
     rm -rf temp && \
-    rm ZAP.tar.gz
+    rm ZAP.tar.gz && \
     chown 1001:0 -R ZAP && \
     chmod a+w -R ZAP && \
     mkdir -p /home/jenkins/.ZAP
