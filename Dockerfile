@@ -1,5 +1,7 @@
 FROM openshift/jenkins-slave-maven-centos7
 
+USER ROOT
+
 # Install Groovy
 RUN cd /opt && \
     curl -L -o groovy-all-2.4.13.jar http://central.maven.org/maven2/org/codehaus/groovy/groovy-all/2.4.13/groovy-all-2.4.13.jar
