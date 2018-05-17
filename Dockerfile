@@ -11,10 +11,11 @@ ENV ZAP_PATH=/opt/ZAP
 RUN cd /opt && \
     curl -L -o ZAP.tar.gz https://github.com/zaproxy/zaproxy/releases/download/2.6.0/ZAP_2.6.0_Linux.tar.gz && \
     mkdir temp && \
-    tar zxvf ZAP.tar.gz -C ./temp && \
+    tar zxf ZAP.tar.gz -C ./temp && \
     ZAP_DIR_NAME=$(ls -1 ./temp) && \
     mv ./temp/${ZAP_DIR_NAME} ZAP && \
     rm -rf temp && \
+    rm ZAP.tar.gz
     chown 1001:0 -R ZAP && \
     chmod a+w -R ZAP && \
     mkdir -p /home/jenkins/.ZAP
