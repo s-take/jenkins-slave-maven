@@ -1,6 +1,6 @@
 FROM openshift/jenkins-slave-maven-centos7
 
-USER ROOT
+USER root
 
 # Install Groovy
 RUN cd /opt && \
